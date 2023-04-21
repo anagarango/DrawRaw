@@ -1,10 +1,10 @@
 import { FC } from 'react'
-import {useDraw} from '../../hooks/useDraw'
+import {useDrawing} from '../../hooks/useDraw'
 
 interface pageProps {}
 
 const page: FC<pageProps> = ({}) => {
-  const { canvasRef, onMouseDown } = useDraw(drawLine)
+  const { canvasRef, onMouseDown } = useDrawing(drawLine)
 
   function drawLine({ prevPoint, currentPoint, ctx }: Draw) {
     const { x: currX, y: currY } = currentPoint;
