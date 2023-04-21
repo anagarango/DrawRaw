@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { useDraw } from '../../hooks/useDraw'
+import {useDraw} from '../../hooks/useDraw'
 
 interface pageProps {}
 
