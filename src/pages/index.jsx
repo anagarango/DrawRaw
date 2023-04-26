@@ -39,22 +39,23 @@ export default function Home(){
           className="shadow-lg rounded-sm absolute top-[15%] bg-[#F5F4F1] translate-y-[20%] trans hover:cursor-[url('/paint-brush.png'),_pointer]"
         />
       </div>
-      <div className='flex w-[20vw] flex-col'>
-        <div className='w-[50px] h-[50px] bg-black' onClick={()=>setBrushColor("black")}/>
-        {/* <div className='border-2 border-black w-[50px] h-[50px] bg-white' onClick={()=>setBrushColor("white")}/> */}
-        <div className='w-[50px] h-[50px] bg-red-600' onClick={()=>setBrushColor("rgb(220 38 38)")}/>
-        <div className='w-[50px] h-[50px] bg-orange-500' onClick={()=>setBrushColor("rgb(249 115 22)")}/>
-        <div className='w-[50px] h-[50px] bg-blue-600' onClick={()=>setBrushColor("rgb(37 99 235)")}/>
-        <div className='w-[50px] h-[50px] bg-green-600' onClick={()=>setBrushColor("rgb(22 163 74)")}/>
-        <div className='w-[50px] h-[50px] bg-yellow-300' onClick={()=>setBrushColor('rgb(253 224 71)')}/>
-        <div className='w-[50px] h-[50px] bg-purple-600' onClick={()=>setBrushColor('rgb(147 51 234)')}/>
-        <div className='w-[50px] h-[50px] bg-pink-600' onClick={()=>setBrushColor('rgb(236 72 153)')}/>
-        <img src="/eraser.png" className='w-[50px] h-[50px]' onClick={()=>setBrushColor('#F5F4F1')} />
-      </div>
-      <div className='flex flex-col items-center'>
-        <div className='w-[30px] h-[30px] bg-black rounded-full' onClick={()=>setBrushWidth(5)}/>
-        <div className='w-[45px] h-[45px] bg-black rounded-full' onClick={()=>setBrushWidth(10)}/>
-        <div className='w-[60px] h-[60px] bg-black rounded-full' onClick={()=>setBrushWidth(15)}/>
+      <div className='flex w-[30vw] flex-col'>
+        <div className='flex flex-col bg-[url("/palette.png")] bg-contain bg-no-repeat'>
+          <div className='w-[50px] h-[50px] bg-black rounded-full' onClick={()=>setBrushColor("black")}/>
+          <div className='w-[50px] h-[50px] bg-red-600 rounded-full' onClick={()=>setBrushColor("rgb(220 38 38)")}/>
+          <div className='w-[50px] h-[50px] bg-orange-500 rounded-full' onClick={()=>setBrushColor("rgb(249 115 22)")}/>
+          <div className='w-[50px] h-[50px] bg-blue-600 rounded-full' onClick={()=>setBrushColor("rgb(37 99 235)")}/>
+          <div className='w-[50px] h-[50px] bg-green-600 rounded-full' onClick={()=>setBrushColor("rgb(22 163 74)")}/>
+          <div className='w-[50px] h-[50px] bg-yellow-300 rounded-full' onClick={()=>setBrushColor('rgb(253 224 71)')}/>
+          <div className='w-[50px] h-[50px] bg-purple-600 rounded-full' onClick={()=>setBrushColor('rgb(147 51 234)')}/>
+          <div className='w-[50px] h-[50px] bg-pink-600 rounded-full' onClick={()=>setBrushColor('rgb(236 72 153)')}/>
+          <img src="/eraser.png" className='w-[50px] h-[50px]' onClick={()=>setBrushColor('#F5F4F1')} />
+        </div>
+        <div className='flex flex-col items-center'>
+          <div className='w-[30px] h-[30px] bg-black rounded-full' onClick={()=>setBrushWidth(5)}/>
+          <div className='w-[45px] h-[45px] bg-black rounded-full' onClick={()=>setBrushWidth(10)}/>
+          <div className='w-[60px] h-[60px] bg-black rounded-full' onClick={()=>setBrushWidth(15)}/>
+        </div>
       </div>
       
     </div>
