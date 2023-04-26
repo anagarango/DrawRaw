@@ -27,19 +27,19 @@ export default function Home(){
   }
 
   return (
-    <div className="w-screen h-screen flexitems-center justify-center bg-sky-200">
-      <div className='flex flex-col '>
-        <img src="/Easel.svg" className='h-screen' />
+    <div className="w-screen h-screen flex items-center justify-between bg-sky-200 overflow-hidden">
+      <div className='flex flex-col w-[70vw] h-screen items-center '>
+        <img src="/Easel.svg" className='h-full min-w-[423px]' />
         <canvas
           onMouseDown={onMouseDown}
           ref={canvasRef}
           height={500}
-          width={800}
+          width={500}
           id="canvas"
-          className="shadow-lg rounded-sm absolute top-[20%] bg-[#F5F4F1] hover:cursor-[url('/paint-brush.png'),_pointer]"
+          className="shadow-lg rounded-sm absolute top-[15%] bg-[#F5F4F1] translate-y-[20%] trans hover:cursor-[url('/paint-brush.png'),_pointer]"
         />
       </div>
-      <div>
+      <div className='flex w-[20vw] flex-col'>
         <div className='w-[50px] h-[50px] bg-black' onClick={()=>setBrushColor("black")}/>
         {/* <div className='border-2 border-black w-[50px] h-[50px] bg-white' onClick={()=>setBrushColor("white")}/> */}
         <div className='w-[50px] h-[50px] bg-red-600' onClick={()=>setBrushColor("rgb(220 38 38)")}/>
@@ -51,10 +51,10 @@ export default function Home(){
         <div className='w-[50px] h-[50px] bg-pink-600' onClick={()=>setBrushColor('rgb(236 72 153)')}/>
         <img src="/eraser.png" className='w-[50px] h-[50px]' onClick={()=>setBrushColor('#F5F4F1')} />
       </div>
-      <div>
-        <div className='w-[50px] h-[50px] bg-black' onClick={()=>setBrushWidth(5)}/>
-        <div className='w-[50px] h-[50px] bg-black' onClick={()=>setBrushWidth(10)}/>
-        <div className='w-[50px] h-[50px] bg-black' onClick={()=>setBrushWidth(15)}/>
+      <div className='flex flex-col items-center'>
+        <div className='w-[30px] h-[30px] bg-black rounded-full' onClick={()=>setBrushWidth(5)}/>
+        <div className='w-[45px] h-[45px] bg-black rounded-full' onClick={()=>setBrushWidth(10)}/>
+        <div className='w-[60px] h-[60px] bg-black rounded-full' onClick={()=>setBrushWidth(15)}/>
       </div>
       
     </div>
