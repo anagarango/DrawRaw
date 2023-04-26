@@ -24,13 +24,14 @@ export default function Home(){
   }
 
   return (
-    <div className="w-screen h-screen flex justify-center items-center">
+    <div className="w-screen h-screen flex flex-col items-center justify-center bg-sky-200">
+      <img src="/Easel.svg" className='h-screen' />
       <canvas
         onMouseDown={onMouseDown}
         ref={canvasRef}
-        width={750}
-        height={750}
-        className="border border-black rounded-md"
+        height={500}
+        width={800}
+        className="shadow-lg rounded-sm absolute top-[20%] bg-[#F5F4F1]"
       />
     </div>
   );
