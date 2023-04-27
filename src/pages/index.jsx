@@ -2,7 +2,7 @@ import { useState } from 'react';
 import {useDrawing} from '../../hooks/useDraw'
 
 export default function Home(){
-  const { canvasRef, onMouseDown } = useDrawing(drawLine)
+  const { canvasRef, onMouseDown, clear } = useDrawing(drawLine)
   const [ brushColor, setBrushColor ] = useState("#000")
   const [ brushWidth, setBrushWidth ] = useState(5)
 
@@ -39,8 +39,8 @@ export default function Home(){
           className="shadow-lg rounded-sm absolute top-[15%] bg-[#F5F4F1] translate-y-[20%] trans hover:cursor-[url('/paint-brush.png'),_pointer]"
         />
       </div>
-      <div className='flex w-[30vw] flex-col'>
-        <div className='flex flex-col bg-[url("/palette.png")] bg-contain bg-no-repeat min-w-[500px]'>
+      <div className='flex w-[30vw] flex-col items-center'>
+        <div className='flex flex-col bg-[url("/palette.png")] bg-contain bg-no-repeat min-w-[380px] max-w-[380px] pb-10'>
           <div className='w-[50px] h-[50px] bg-black rounded-full relative top-[250px] left-[50px]' onClick={()=>setBrushColor("black")}/>
           <div className='w-[50px] h-[50px] bg-red-600 rounded-full relative top-[130px] left-[30px]' onClick={()=>setBrushColor("rgb(220 38 38)")}/>
           <div className='w-[50px] h-[50px] bg-orange-500 rounded-full relative top-[10px] left-[60px]' onClick={()=>setBrushColor("rgb(249 115 22)")}/>
@@ -51,11 +51,12 @@ export default function Home(){
           <div className='w-[50px] h-[50px] bg-pink-600 rounded-full relative top-[-110px] left-[270px]' onClick={()=>setBrushColor('rgb(236 72 153)')}/>
           <img src="/eraser.png" className='w-[50px] h-[50px] relative top-[-220px] left-[170px]' onClick={()=>setBrushColor('#F5F4F1')} />
         </div>
-        <div className='flex items-center justify-center'>
+        <div className='flex items-center justify-center pb-10'>
           <div className={brushWidth == 5 ? 'w-[30px] h-[30px] bg-black rounded-full' : 'w-[30px] h-[30px] border-2 border-black rounded-full'} onClick={()=>setBrushWidth(5)}/>
           <div className={brushWidth == 10 ? 'w-[45px] h-[45px] bg-black rounded-full mx-3' : 'w-[45px] h-[45px] border-2 border-black rounded-full mx-3'} onClick={()=>setBrushWidth(10)}/>
           <div className={brushWidth == 15 ? 'w-[60px] h-[60px] bg-black rounded-full' : 'w-[60px] h-[60px] border-2 border-black rounded-full'} onClick={()=>setBrushWidth(15)}/>
         </div>
+        <button type="button" onClick={clear} className="border-2 border-black w-fit p-2 rounded-md">Erase your beautiful canvas</button>
       </div>
       
     </div>
