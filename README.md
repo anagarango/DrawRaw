@@ -11,7 +11,7 @@ pnpm dev
 ```
 
 ## Description
-DrawRaw is a drawing app just made for fun while learning typescript along with a tutorial and play around with the styling of the page and personalize it. Yearly, I paint landscapes following tutorials to improve this skill so i took this opportunity to kind of make it feel as if I was painting irl.
+DrawRaw is a drawing app just made for fun while learning typescript following a tutorial and play around with the styling of the page and personalize it. Yearly, I paint landscapes following tutorials to improve this skill so i took this opportunity to kind of make it feel as if I was painting irl.
 
 ## Coding Technologies and Languages
 * Next.js
