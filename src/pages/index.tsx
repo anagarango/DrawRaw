@@ -7,7 +7,7 @@ export default function Home(){
   const [ brushColor, setBrushColor ] = useState("#000")
   const [ brushWidth, setBrushWidth ] = useState(5)
 
-  function drawLine({ prevPoint, currentPoint, ctx }) {
+  function drawLine({ prevPoint, currentPoint, ctx }: { prevPoint: any; currentPoint: any; ctx: any}) {
     const currX = currentPoint.x;
     const currY = currentPoint.y;
     const lineColor = brushColor;
