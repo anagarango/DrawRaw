@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { useState } from 'react';
 import {useDrawing} from '../../hooks/useDraw'
 
@@ -27,6 +28,10 @@ export default function Home(){
   }
 
   return (
+    <>
+    <Head>
+      <title>DrawRaw</title>
+    </Head>
     <div className="w-screen h-screen flex items-center justify-between bg-sky-200 overflow-hidden">
       <div className='flex flex-col w-[70vw] h-screen items-center '>
         <img src="/Easel.svg" className='h-full min-w-[423px]' />
@@ -60,5 +65,6 @@ export default function Home(){
       </div>
       
     </div>
+    </>
   );
 };
