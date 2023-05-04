@@ -18,3 +18,4 @@ DrawRaw is a drawing app just made for fun while learning typescript following a
 * Javascript
 * Typescript
 * Tailwind.css
+* Playwright
